@@ -1,4 +1,4 @@
-export const Pricing = () => {
+const Pricing = () => {
   return (
     <section id="products">
 
