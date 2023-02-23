@@ -1,4 +1,4 @@
-export const Footer = () => {
+const Footer = () => {
     return (
         <section id="footer">
           <div className="bg-pink-500 flex flex-col justify-center pt-4 pb-4 border-t sm:flex-row">

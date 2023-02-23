@@ -1,7 +1,5 @@
 import { useState } from "react";
-
-
-export const Nav = () => {
+const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

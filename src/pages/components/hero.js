@@ -1,4 +1,4 @@
-export const Header = () => {
+const Header = () => {
   return (
     <section id="home">
       <div className="flex flex-col items-center justify-center px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:pt-40 md:px-0 bg-[url('/img/header.jpeg')] bg-fixed bg-center">
