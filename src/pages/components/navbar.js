@@ -1,46 +1,45 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import Feature from "./about";
+
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 font-['Poppins'] ">
       <div className="relatives flex items-center justify-between">
         <a
           href="/"
           className="inline-flex items-center"
         >
-    
           <span className="ml-2 text-xl font-bold tracking-wide text-pink-600 uppercase">
             Avobeauty
           </span>
         </a>
         <ul className="hidden md:flex items-center space-x-8">
-          <li>
+          <li>  
             <a
-              href="#home"
-            
+              href="/"
             >
               Home
             </a>
           </li>
           <li>
             <a
-              href="#products"
+              href="/"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Products
+              Favorite
             </a>
           </li>
           <li>
             <a
-              href="#footer"
+              href='/About'
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               About Us
             </a>
           </li>
         </ul>
-
         <div className="md:hidden">
           <button
             className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
@@ -61,7 +60,6 @@ const Nav = () => {
               />
             </svg>
           </button>
-
           {isMenuOpen &&(
             <div className="absolute top-0 left-0 w-full">
               <div className="p-5 bg-white border rounded shadow-sm">
@@ -71,7 +69,6 @@ const Nav = () => {
                       href="/"
                       className="inline-flex items-center"
                     >
-                      
                       <span className="ml-2 text-xl font-bold tracking-wide text-pink-600 uppercase">
                         Avobeauty
                       </span>
@@ -97,7 +94,7 @@ const Nav = () => {
                   <ul className="space-y-4">
                     <li>
                       <a
-                        href="#home"
+                        href="/"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Home
@@ -105,18 +102,18 @@ const Nav = () => {
                     </li>
                     <li>
                       <a
-                        href="#products"
+                        href="/card"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Products
+                        Favorite
                       </a>
                     </li>
 
                     <li>
                       <a
-                        href="#footer"
+                        href={Feature}
                         aria-label="About us"
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -124,7 +121,6 @@ const Nav = () => {
                         About us
                       </a>
                     </li>
-
                   </ul>
                 </nav>
               </div>

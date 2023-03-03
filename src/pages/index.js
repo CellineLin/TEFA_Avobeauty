@@ -18,6 +18,7 @@ export default function Home() {
       <Header />
       <Pricing />
       <Footer />
+
     </>
   );
 }
