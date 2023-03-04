@@ -1,5 +1,10 @@
 import React from 'react'
 import Nav from "../components/navbar";
+import Footer from '../components/footer';
+import { UilTruck } from '@iconscout/react-unicons'
+import { UilVirusSlash } from '@iconscout/react-unicons'
+import { UilPagelines } from '@iconscout/react-unicons'
+import { UilThumbsUp } from '@iconscout/react-unicons'
 
 function About() {
   return (
@@ -29,24 +34,14 @@ function About() {
         <div className="grid max-w-screen-lg gap-8 row-gap-10 mx-auto lg:grid-cols-2">
           <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
             <div className="mr-4">
-              <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
-                <svg
-                  className="w-10 h-10 text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
+              <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-pink-50">
+              <UilTruck></UilTruck>
+                
               </div>
             </div>
             <div>
               <h6 className="mb-3 text-xl font-bold leading-5 text-pink-600">
+                
                 Worldwide Shipping
               </h6>
               <p className="mb-3 text-sm text-gray-900">
@@ -54,36 +49,18 @@ function About() {
                 never stopped old Big Bear. I didn't even know we were calling
                 him Big Bear. We never had the chance to.
               </p>
-              <a
-                href="/"
-                aria-label=""
-                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              >
-                Learn more
-              </a>
+            
             </div>
           </div>
           <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
             <div className="mr-4">
-              <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
-                <svg
-                  className="w-10 h-10 text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
+              <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-pink-50">
+             <UilVirusSlash></UilVirusSlash>
               </div>
             </div>
             <div>
               <h6 className="mb-3 text-xl font-bold leading-5 text-pink-600">
-                All Skin-types Concern
+                Cruelty Free
               </h6>
               <p className="mb-3 text-sm text-gray-900">
                 Rough pomfret lemon shark plownose chimaera southern sandfish
@@ -91,31 +68,13 @@ function About() {
                 triplefin gulper South American Lungfish mahi-mahi,
                 butterflyfish glass catfish soapfish ling gray mullet!
               </p>
-              <a
-                href="/"
-                aria-label=""
-                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              >
-                Learn more
-              </a>
+            
             </div>
           </div>
           <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
             <div className="mr-4">
-              <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
-                <svg
-                  className="w-10 h-10 text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
+              <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-pink-50">
+             <UilPagelines></UilPagelines>
               </div>
             </div>
             <div>
@@ -128,31 +87,13 @@ function About() {
                 Hercules Morse, as big as a horse and Mrs Falani were up to no
                 good with a bunch of crook pikelets.
               </p>
-              <a
-                href="/"
-                aria-label=""
-                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              >
-                Learn more
-              </a>
+            
             </div>
           </div>
           <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
             <div className="mr-4">
-              <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
-                <svg
-                  className="w-10 h-10 text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
+              <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-pink-50">
+             <UilThumbsUp></UilThumbsUp>
               </div>
             </div>
             <div>
@@ -165,17 +106,12 @@ function About() {
                 synergy capacity building, white paper; silo, unprecedented
                 challenge B-corp problem-solvers.
               </p>
-              <a
-                href="/"
-                aria-label=""
-                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              >
-                Learn more
-              </a>
+            
             </div>
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   )
 }

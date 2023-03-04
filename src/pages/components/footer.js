@@ -6,6 +6,8 @@ const Footer = () => {
               © Copyright 2023 Avobeauty Official. All rights reserved.
             </p>
 
+            
+
           </div>
         </section>
     )  

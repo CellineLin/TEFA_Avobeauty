@@ -16,7 +16,7 @@ const Header = () => {
                   fill="currentColor"
                   className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
                 >
-                  <defs></defs>
+                 
                   <rect
                     fill="url(#192913ce-1f29-4abd-b545-0fbccfd2b0ec)"
                     width="52"
@@ -26,12 +26,12 @@ const Header = () => {
               </span>{" "}
               for your beauty essentials
             </h2>
-          </div>
-
-          <p className="max-w-md mb-10 text-xs text-gray-600 sm:text-sm md:text-center">
+            <p className="max-w-md mb-40 text-xs  text-gray-600 sm:text-sm md:text-center">
             Discover more about Indonesian skincare products special designed to
             address your skin concerns.
           </p>
+          </div>
+
         </div>
       </div>
     </section>

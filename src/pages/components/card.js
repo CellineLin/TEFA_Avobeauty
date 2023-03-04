@@ -26,7 +26,7 @@ const Pricing = () => {
             <svg
               viewBox="0 0 52 24"
               fill="currentColor"
-              className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+              className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-pink-600 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
             >
               <defs>
                 <pattern
@@ -59,17 +59,18 @@ const Pricing = () => {
         <div className="flex flex-col lg:flex-row justify-between">
           <div>
             <p className="font-bold text-xl text-gray-700">Filter</p>
-            <div className="flex justify-between flex-wrap rounded-lg">
+
+            <div className="flex justify-between flex-wrap rounded-lg outline-none shadow-md ">
               <button
                 onClick={() => setSkincare(data)}
-                className="m-1 text-black-600 hover:text-pink-600 px-2 py-2 "
+                className=" m-1 text-black-600 hover:text-pink-600 px-4 py-2 "
               >
                 All
               </button>
               {kategori.map((isi) => (
                 <button
                   onClick={() => filter(isi.categories)}
-                  className="m-1 text-black-600 hover:text-pink-600 px-2 py-2"
+                  className="m-1 text-black-600 hover:text-pink-600 px-2 py-2 border-l-2"
                 >
                   {isi.name}
                 </button>
@@ -79,38 +80,32 @@ const Pricing = () => {
         </div>
       </div>
 
-      
-
       <div className="grid max-w-md gap-4 row-gap-2 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
-      
-          {skincare.map((item, index) => (
-            <Link
-              key={index}
-              href={`/${item.id}`}
-              className="object-cover w-full h-full rounded-t"
-            >
-              
-              <div className="relative w-full h-48">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="object-contain w-full h-full"
-                />
+        {skincare.map((item, index) => (
+          <Link
+            key={index}
+            href={`/${item.id}`}
+            className="object-cover w-full h-full"
+          >
+            <div className="relative w-full h-48">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="object-contain w-full h-full"
+              />
+            </div>
+            <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-2xl w-fit">
+              <div>
+                <div className="text-lg font-semibold">{item.name}</div>
+                <p className="text-sm text-gray-900">{item.description}</p>
               </div>
-              <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-2xl w-fit">
-                <div>
-                  <div className="text-lg font-semibold">{item.name}</div>
-                  <p className="text-sm text-gray-900">{item.description}</p>
-                </div>
 
-                <div className="mt-1 mb-4 mr-1 text-2xl font-bold sm:text-xl text-pink-600">
-                  {item.price}
-                </div>
-                
+              <div className="mt-1 mb-4 mr-1 text-2xl font-bold sm:text-xl text-pink-600">
+                {item.price}
               </div>
-            </Link>
-          ))}
-          
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

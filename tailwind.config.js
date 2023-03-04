@@ -11,14 +11,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // header's background
       backgroundImage: {
         "hero-pattern": "url('/img/header.jpeg')",
       },
-      colors : {
-        green : '#7d9c59'
+      // color palette
+      colors: {
+        green: "#7d9c59",
       },
-      fontFamily : 'Poppins'
+      // font family
+      fontFamily: "Poppins",
     },
   },
-  plugins: [require("tw-elements/dist/plugin")],
+
+  plugins: [],
+
+ 
 };
