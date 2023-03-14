@@ -1,17 +1,31 @@
 import Link from "next/link";
-import React, { useState } from "react";
-import { data, kategori } from "data/data";
+import React, { useState, useEffect } from "react";
 
 const Pricing = () => {
-  const [skincare, setSkincare] = useState(data);
+  const [data, setData] = useState([]);
+  const [items, setItems] = useState();
 
-  const filter = (category) => {
-    setSkincare(
-      data.filter((item) => {
-        return item.category === category;
-      })
-    );
+  const filterItem = (categItem) => {
+    const updatedItems = data.filter((cureElem) => {
+      return cureElem.category === categItem;
+    });
+    setItems(updatedItems);
   };
+  
+  const url = '/data/data.json'
+
+    useEffect(() => {
+          const fetchData = async () => {
+            try{
+              const response = await fetch(url);
+              const data = await response.json();
+              setData(data);
+            } catch (error){
+              console.log("Ha");
+            }
+          };
+          fetchData();
+      }, []);
 
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 font-['Poppins'] ">
@@ -62,50 +76,91 @@ const Pricing = () => {
 
             <div className="flex justify-between flex-wrap rounded-lg outline-none shadow-md ">
               <button
-                onClick={() => setSkincare(data)}
+                onClick={() => setItems(data)}
                 className=" m-1 text-black-600 hover:text-pink-600 px-4 py-2 "
               >
                 All
               </button>
-              {kategori.map((isi) => (
+          
                 <button
-                  onClick={() => filter(isi.categories)}
+                  onClick={() => filterItem('serum')}
                   className="m-1 text-black-600 hover:text-pink-600 px-2 py-2 border-l-2"
                 >
-                  {isi.name}
+                  serum
                 </button>
-              ))}
+                <button
+                  onClick={() => filterItem('toner')}
+                  className="m-1 text-black-600 hover:text-pink-600 px-2 py-2 border-l-2"
+                >
+                  toner
+                </button>
+                <button
+                  onClick={() => filterItem('moist')}
+                  className="m-1 text-black-600 hover:text-pink-600 px-2 py-2 border-l-2"
+                >
+                  moisturizer
+                </button>
+     
             </div>
           </div>
         </div>
       </div>
 
       <div className="grid max-w-md gap-4 row-gap-2 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
-        {skincare.map((item, index) => (
-          <Link
-            key={index}
-            href={`/${item.id}`}
-            className="object-cover w-full h-full"
-          >
-            <div className="relative w-full h-48">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="object-contain w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-2xl w-fit">
-              <div>
-                <div className="text-lg font-semibold">{item.name}</div>
-                <p className="text-sm text-gray-900">{item.description}</p>
+        {items?(
+          items?.map((item) => (
+            <Link  
+              href={`/${item.id}`}
+              className="object-cover w-full h-full"
+            >
+              <div className="relative w-full h-48">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="object-contain w-full h-full"
+                />
               </div>
-
-              <div className="mt-1 mb-4 mr-1 text-2xl font-bold sm:text-xl text-pink-600">
-                {item.price}
+              <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-2xl w-fit">
+                <div>
+                  <div className="text-lg font-semibold">{item.name}</div>
+                  <p className="text-sm text-gray-900">{item.description}</p>
+                </div>
+  
+                <div className="mt-1 mb-4 mr-1 text-2xl font-bold sm:text-xl text-pink-600">
+                  {item.price}
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))
+        ):(
+          data?.map((item) => (
+            <Link  
+              href={`/${item.id}`}
+              className="object-cover w-full h-full"
+            >
+              <div className="relative w-full h-48">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+              <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-2xl w-fit">
+                <div>
+                  <div className="text-lg font-semibold">{item.name}</div>
+                  <p className="text-sm text-gray-900">{item.description}</p>
+                </div>
+  
+                <div className="mt-1 mb-4 mr-1 text-2xl font-bold sm:text-xl text-pink-600">
+                  {item.price}
+                </div>
+              </div>
+            </Link>
+          ))
+        )
+        
+      
+      }
       </div>
     </div>
   );

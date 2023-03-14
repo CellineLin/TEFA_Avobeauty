@@ -1,4 +1,3 @@
-import { data } from "data/data";
 import React, { useEffect, useState, useRef } from "react";
 import { Router, useRouter } from "next/router";
 import Nav from "../components/navbar";

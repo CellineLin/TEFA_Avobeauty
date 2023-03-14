@@ -4,9 +4,13 @@ import Header from "./components/hero";
 import Pricing from "./components/card";
 import Footer from "./components/footer";
 
+
+
+
 export default function Home() {
   return (
     <>
+
       <Head>
         <title>Avobeauty Official</title>
         <meta
@@ -18,6 +22,7 @@ export default function Home() {
       <Header />
       <Pricing />
       <Footer />
+
 
     </>
   );
